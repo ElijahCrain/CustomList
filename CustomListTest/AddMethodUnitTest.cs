@@ -5,11 +5,52 @@ using CustomList;
 namespace CustomListTest
 {
 	[TestClass]
-	public class UnitTest1
+	public class AddMethodUnitTest
 	{
 		[TestMethod]
-		public void TestMethod1()
+		public void Add_Item_CountIncreases_ByOne()
 		{
+			//Arange
+
+			CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+			int number = 9;
+			int expected = 1;
+			int actual;
+
+			//Act
+
+			collectionOfNumbers.Add(number);
+			actual = collectionOfNumbers.Count;
+
+			//Assert
+
+			Assert.AreEqual(expected, actual);
+
+		}
+		public void Add_ItemsCount_ByThree()
+		{          
+			//Arange
+
+			CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+			int numberOne = 9;
+			int numberTwo = 5;
+			int numberThree = 7;
+			int expected = 3;
+			int actual;
+
+			//Act
+
+			collectionOfNumbers.Add(numberOne);
+			collectionOfNumbers.Add(numberTwo);
+			collectionOfNumbers.Add(numberThree);
+			actual = collectionOfNumbers.Count;
+			
+
+			//Assert
+
+			Assert.AreEqual(expected, actual);
 		}
 	}
 }
