@@ -52,5 +52,26 @@ namespace CustomListTest
 
 			Assert.AreEqual(expected, actual);
 		}
+
+		public void Add_ThreeNumbersToList_TestReturn()
+		{
+			//Arange
+			CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+			int numberOne = 8;
+			int numberTwo = 4;
+			int numberThree = 6;
+			int expected = 6;
+			int actual;
+
+			//Act
+
+			collectionOfNumbers.Add(numberOne);
+			collectionOfNumbers.Add(numberTwo);
+			collectionOfNumbers.Add(numberThree);
+			actual = collectionOfNumbers[2];
+			//Assert
+			Assert.AreEqual(expected, actual);
+		}
 	}
 }
