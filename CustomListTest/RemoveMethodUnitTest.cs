@@ -59,6 +59,32 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
+		public void Decreese_count_byTwo()
+		{
+			//Arange
+			CustomList<int> collectionOfNumbers = new CustomList<int>();
+
+
+			int number1 = 9;
+			int number2 = 7;
+			int number3 = 5;
+			int expected = 1;
+			int actual;
+
+			//Act
+
+			collectionOfNumbers.Add(number1);
+			collectionOfNumbers.Add(number2);
+			collectionOfNumbers.Add(number3);
+			collectionOfNumbers.Remove(number2);
+			collectionOfNumbers.Remove(number3);
+			actual = collectionOfNumbers.Count;
+
+			//Assert
+
+			Assert.AreEqual(expected, actual);
+
+		}
 		public void Test_2()
 		{
 			//Arange
