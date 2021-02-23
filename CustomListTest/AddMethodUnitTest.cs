@@ -122,6 +122,28 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
-		
+		public void Test_()
+		{
+			//Arange
+			CustomList<int> customListFivth = new CustomList<int>();
+			int num = 6;
+			int numone = 3;
+			int expected = 6;
+			int actual;
+
+			//act
+			customListFivth.Add(num);
+			customListFivth.Add(numone);
+			customListFivth.Add(numone);
+			customListFivth.Add(numone);
+			customListFivth.Add(numone);
+			actual = customListFivth[0];
+
+			//assert
+
+			Assert.AreEqual(expected, actual);
+
+		}
+
 	}
 }
