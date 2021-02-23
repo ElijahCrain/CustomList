@@ -8,5 +8,9 @@ namespace CustomListTest
 	class RemoveMethodUnitTest
 	{
 		[TestMethod]
+		public void remove()
+		{
+
+		}
 	} 
 }

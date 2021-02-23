@@ -42,14 +42,36 @@ namespace CustomList
 		}
 
 		//member methods
-		public void Add(T itemToAdd)
+		public void  Add(T itemToAdd)
 		{
 			if (count == capacity)
 			{
+				Capacity = Capacity * 2;
 				//create new  array
-				//move items over
-				//new array is now _items array.
+				// _items: [ 23, 43,12, 56 ]
+
+				T[] _items2 = new T[Capacity];
+				// _items2 [ null, null, null, null, null, null, null, null ]
+
+				for (int i = 0; i < _items.Length; i++)
+				{
+					//move items over
+					_items2[i] = _items[i];
+
+					// _items2 [ 23, 43, 12, 56, null, null, null, null ]
+
+
+				}
+
+				// _items2 [ 23, 43, 12, 56, null, null, null, null ]
+				// _items: [ 23, 43,12, 56 ]
+
+				_items = _items2;
+
+				// _items: [ 23, 43, 12, 56, null, null, null, null ]
+
 			}
+
 			_items[count] = itemToAdd;
 			count++;
 		}
