@@ -76,6 +76,7 @@ namespace CustomListTest
 
 		public void Test_for_NumberOfCapacityIncresse()
 		{
+			//Arange
 			CustomList<int> customListCapacity = new CustomList<int>();
 
 			int numOne = 2;
@@ -99,5 +100,28 @@ namespace CustomListTest
 
 
 		}
+		public void Test_FithItemIn_IndexIsTrue()
+		{
+			//Arange
+			CustomList<int> customListFivth = new CustomList<int>();
+			int num = 6;
+			int numone = 3;
+			int expected = 3;
+			int actual;
+
+			//act
+			customListFivth.Add(num);
+			customListFivth.Add(num);
+			customListFivth.Add(num);
+			customListFivth.Add(num);
+			customListFivth.Add(numone);
+			actual = customListFivth[4];
+
+			//assert
+
+			Assert.AreEqual(expected, actual);
+
+		}
+		
 	}
 }
