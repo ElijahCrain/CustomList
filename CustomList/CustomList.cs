@@ -13,6 +13,26 @@ namespace CustomList
 
 		private int count;
 		private int capacity;
+		//Propertys
+		public int Count
+		{
+			get
+			{
+				return count;
+			}
+			
+		}
+		public int Capacity
+		{
+			get
+			{
+				return capacity;
+			}
+			set
+			{
+				capacity = value;
+			}
+		}
 		//Constructor
 		public CustomList()
 		{
@@ -34,6 +54,6 @@ namespace CustomList
 			count++;
 		}
 
-
+		 
 	}
 }

@@ -7,5 +7,6 @@ namespace CustomListTest
 	[TestClass]
 	class RemoveMethodUnitTest
 	{
-	}
+		[TestMethod]
+	} 
 }
