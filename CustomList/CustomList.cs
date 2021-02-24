@@ -18,6 +18,11 @@ namespace CustomList
 		{
 			get
 			{
+				if (index <= 0 || index >= count)
+				{
+					index = 0;
+					index = count;
+				}
 				return _items[index];
 			}
 		}
