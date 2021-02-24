@@ -85,27 +85,50 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
-		public void Test_2()
+		public void Test_ifSecondIndex_IsTrusAfterDecrease()
 		{
 			//Arange
-			CustomList<int> collectionOfNumbers = new CustomList<int>();
+			CustomList<int> customListSecond = new CustomList<int>();
+			int num = 6;
+			int numone = 3;
+			int numTwo = 4;
+			int expected = 3;
+			int actual;
 
-			//Act
+			//act
+			customListSecond.Add(num);
+			customListSecond.Add(num);
+			customListSecond.Add(numTwo);
+			customListSecond.Add(numone);
+			customListSecond.Add(num);
+			customListSecond.Remove(numTwo);
 
-			//Assert
+			actual = customListSecond[2];
 
+			//assert
 
+			Assert.AreEqual(expected, actual);
 		}
-		public void Test_3()
+		public void Remove_Item_AndChecksIfRemoved()
 		{
-			//Arange
-			CustomList<int> collectionOfNumbers = new CustomList<int>();
-
+			//Arrange
+			CustomList<int> itemsToRemove = new CustomList<int>();
+			int number1 = 4;
+			int number2 = 5;
+			int number3 = 6;
+			int number4 = 7;
+			int expected = 6;
+			int actual;
 			//Act
-
+			itemsToRemove.Add(number1);
+			itemsToRemove.Add(number2);
+			itemsToRemove.Add(number3);
+			itemsToRemove.Add(number4);
+			itemsToRemove.Remove(number2);
+			actual = itemsToRemove[1];
 			//Assert
-
-
+			Assert.AreEqual(expected, actual);
 		}
+
 	} 
 }

@@ -122,7 +122,7 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
-		public void Test_()
+		public void Test_IfZeroIndexIs_True()
 		{
 			//Arange
 			CustomList<int> customListFivth = new CustomList<int>();

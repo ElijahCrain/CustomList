@@ -14,6 +14,13 @@ namespace CustomList
 		private int count;
 		private int capacity;
 		//Propertys
+		public T this[int index]
+		{
+			get
+			{
+				return _items[index];
+			}
+		}
 		public int Count
 		{
 			get
