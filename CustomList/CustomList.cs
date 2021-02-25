@@ -18,12 +18,19 @@ namespace CustomList
 		{
 			get
 			{
-				if (index <= 0 || index >= count)
+				if (index < 0 || index >= count)
 				{
-					index = 0;
-					index = count;
+					throw new IndexOutOfRangeException("Your Input is out of range");
 				}
 				return _items[index];
+			}
+			set
+			{
+				if (index < 0 || index >= count)
+				{
+					throw new IndexOutOfRangeException("Your Input is out of range");
+				}
+				_items[index] = value;
 			}
 		}
 		public int Count
@@ -63,31 +70,37 @@ namespace CustomList
 				// _items: [ 23, 43,12, 56 ]
 
 				T[] _items2 = new T[Capacity];
-				// _items2 [ null, null, null, null, null, null, null, null ]
 
-				for (int i = 0; i < _items.Length; i++)
+				for (int i = 0; i < Count; i++)
 				{
-					//move items over
 					_items2[i] = _items[i];
-
-					// _items2 [ 23, 43, 12, 56, null, null, null, null ]
-
 
 				}
 
-				// _items2 [ 23, 43, 12, 56, null, null, null, null ]
-				// _items: [ 23, 43,12, 56 ]
 
 				_items = _items2;
 
-				// _items: [ 23, 43, 12, 56, null, null, null, null ]
 
 			}
 
 			_items[count] = itemToAdd;
 			count++;
 		}
+			//remove method 
+			//can not use conventual == //.= use a bool
+		public void Remove(T itemToRemove)
+		{
+			for (int i = 0; i < count; i++)
+			{
+				if (_items[i].Equals(itemToRemove))
+				{
+					_items[i] = itemToRemove;
+					i--;
+				}
+				
+			}
 
+		}
 		 
 	}
 }

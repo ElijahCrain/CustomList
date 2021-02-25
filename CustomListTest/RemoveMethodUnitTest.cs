@@ -5,7 +5,7 @@ using CustomList;
 namespace CustomListTest
 {
 	[TestClass]
-	class RemoveMethodUnitTest
+	 public class RemoveMethodUnitTest
 	{
 		[TestMethod]
 		public void remove_Item_CountDecreases_ByOne()
@@ -29,6 +29,8 @@ namespace CustomListTest
 
 			Assert.AreEqual(expected, actual);
 		}
+		[TestMethod]
+
 		public void Test_for_NumberOfCapacityIfDecreasse_ByOne()
 		{
 			//Arange
@@ -59,6 +61,8 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
+		[TestMethod]
+
 		public void Decreese_count_byTwo()
 		{
 			//Arange
@@ -85,6 +89,8 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
+		[TestMethod]
+
 		public void Test_ifSecondIndex_IsTrusAfterDecrease()
 		{
 			//Arange
@@ -109,6 +115,8 @@ namespace CustomListTest
 
 			Assert.AreEqual(expected, actual);
 		}
+		[TestMethod]
+
 		public void Remove_Item_AndChecksIfRemoved()
 		{
 			//Arrange

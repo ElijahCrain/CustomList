@@ -28,6 +28,7 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
+		[TestMethod]
 		public void Add_ItemsCount_ByThree()
 		{          
 			//Arange
@@ -52,7 +53,7 @@ namespace CustomListTest
 
 			Assert.AreEqual(expected, actual);
 		}
-
+		[TestMethod]
 		public void Add_ThreeNumbersToList_TestReturn()
 		{
 			//Arange
@@ -73,7 +74,7 @@ namespace CustomListTest
 			//Assert
 			Assert.AreEqual(expected, actual);
 		}
-
+		[TestMethod]
 		public void Test_for_NumberOfCapacityIncresse()
 		{
 			//Arange
@@ -100,6 +101,7 @@ namespace CustomListTest
 
 
 		}
+		[TestMethod]
 		public void Test_FithItemIn_IndexIsTrue()
 		{
 			//Arange
@@ -122,6 +124,7 @@ namespace CustomListTest
 			Assert.AreEqual(expected, actual);
 
 		}
+		[TestMethod]
 		public void Test_IfZeroIndexIs_True()
 		{
 			//Arange
